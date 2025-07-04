@@ -8,4 +8,8 @@ const config = getDefaultConfig(__dirname, {
 // Clear cache configuration
 config.cacheStores = [];
 
+// Set the correct entry point for Expo Router
+config.resolver.platforms = ['ios', 'android', 'native', 'web'];
+config.resolver.entryPoints = ['expo-router/entry'];
+
 module.exports = config;
